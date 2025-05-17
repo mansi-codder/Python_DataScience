@@ -1,4 +1,4 @@
-# Common Regression Loss Functions
+# 📉 Common Regression Loss Functions
 
 These loss functions measure the difference between predicted and actual values in machine learning regression tasks. Here’s a breakdown:
 
@@ -10,9 +10,7 @@ These loss functions measure the difference between predicted and actual values 
 Measures the largest absolute error between predicted and actual values.
 
 **Formula:**  
-$$
-\text{MaxAE} = \max\left(|y_{\text{true}} - y_{\text{pred}}|\right)
-$$
+MaxAE = max( | y_true - y_pred | )
 
 **Focus:**  
 Only the worst-case scenario (largest mistake).
@@ -28,9 +26,7 @@ When you care about the single worst error, such as ensuring no extreme failures
 Measures the average absolute difference between predicted and actual values.
 
 **Formula:**  
-$$
-\text{MAE} = \frac{1}{n} \sum |y_{\text{true}} - y_{\text{pred}}|
-$$
+MAE = (1/n) * Σ | y_true - y_pred |
 
 **Focus:**  
 Gives a more balanced view of errors without squaring them.
@@ -46,9 +42,7 @@ Useful in regression models where you want a general estimate of how far off pre
 Measures the average squared difference between predicted and actual values.
 
 **Formula:**  
-$$
-\text{MSE} = \frac{1}{n} \sum (y_{\text{true}} - y_{\text{pred}})^2
-$$
+MSE = (1/n) * Σ ( y_true - y_pred )²
 
 **Focus:**  
 Penalizes larger errors more strongly because of squaring.
@@ -58,7 +52,7 @@ Popular in regression problems, especially where bigger errors need more penalty
 
 ---
 
-## Comparison Table
+## 📊 Comparison Table
 
 | Loss Function | Focus                  | Effect                          |
 |---------------|-----------------------|---------------------------------|
