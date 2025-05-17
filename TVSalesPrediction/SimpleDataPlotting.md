@@ -16,17 +16,17 @@ data = {
 df = pd.DataFrame(data)
 
 # Linear regression and plotting
-X = df[['x']]
-y = df['y']
+X = df[['x']]  # Feature (TV budget)
+y = df['y']    # Target (Sales)
 
-model = LinearRegression()
-model.fit(X, y)
+model = LinearRegression()      # Create the linear regression model
+model.fit(X, y)                # Fit the model to the data
 
-x_range = np.linspace(X.min(), X.max(), 100).reshape(-1, 1)
-y_pred = model.predict(x_range)
+x_range = np.linspace(X.min(), X.max(), 100).reshape(-1, 1)  # Generate a range of TV budget values
+y_pred = model.predict(x_range)                              # Predict sales for these values
 
-plt.scatter(X, y, label="Data Points")
-plt.plot(x_range, y_pred, color='red', label="Prediction Line")
+plt.scatter(X, y, label="Data Points")                       # Plot the original data points
+plt.plot(x_range, y_pred, color='red', label="Prediction Line")  # Plot the regression line
 plt.xlabel("TV Budget (in thousands)")
 plt.ylabel("Sales (in thousands of units)")
 plt.title("TV Budget vs Sales with Prediction Line")
